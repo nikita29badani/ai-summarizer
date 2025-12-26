@@ -6,12 +6,12 @@ async function summarizeText() {
 
     // Check agar khali hai
     if (!inputText.trim()) {
-        alert("Arey bhai, pehle kuch text toh likho!");
+        alert("Describe Something first..");
         return;
     }
 
     // Button ko loading mode mein daalo
-    button.innerText = "Soch raha hu... 🤔";
+    button.innerText = "Loading...";
     button.disabled = true;
     outputBox.style.display = "none";
 
@@ -34,10 +34,10 @@ async function summarizeText() {
 
     } catch (error) {
         console.error("Error:", error);
-        alert("Server connect nahi ho raha.");
+        alert("Server not responding. Please try again later.");
     } finally {
         // Button wapas normal karo
-        button.innerText = "Summarize It 🚀";
+        button.innerText = "Generate 🚀";
         button.disabled = false;
     }
 }

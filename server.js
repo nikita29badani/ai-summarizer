@@ -22,7 +22,7 @@ app.post('/summarize', async (req, res) => {
         const TEXT = req.body.text;
         
         if (!TEXT || !TEXT.trim()) {
-            return res.status(400).json({ error: "Bhai kuch text toh likh!" });
+            return res.status(400).json({ error: "Describe something atleast!" });
         }
 
         const prompt = `Write 5 catchy Instagram captions with emojis for this description: ${TEXT}`;
@@ -35,11 +35,11 @@ app.post('/summarize', async (req, res) => {
 
     } catch (error) {
         console.error("Error:", error);
-        res.status(500).json({ error: "AI thoda busy hai, wapas try kar." });
+        res.status(500).json({ error: "Error processing your request." });
     }
 });
 
 // Start Server
 app.listen(port, () => {
-    console.log(`Server chalu hai boss! Link: http://localhost:${port}`);
+    console.log(`Server live! Link: http://localhost:${port}`);
 });
