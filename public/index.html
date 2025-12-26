@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ AI Summarizer</h1>
+        <p>Bada text daalo, chota summary paao.</p>
+        
+        <textarea id="inputText" placeholder="Yahan apna lamba article paste karo..."></textarea>
+        
+        <button onclick="summarizeText()" id="submitBtn">Summarize It 🚀</button>
+        
+        <div class="output-box" id="outputBox" style="display: none;">
+            <h3>📝 Summary:</h3>
+            <div id="summaryResult"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
