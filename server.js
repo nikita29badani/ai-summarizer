@@ -19,9 +19,9 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 // API Route
 app.post('/summarize', async (req, res) => {
     try {
-        const textToSummarize = req.body.text;
+        const TEXT = req.body.text;
         
-        if (!textToSummarize) {
+        if (!TEXT || !TEXT.trim()) {
             return res.status(400).json({ error: "Bhai kuch text toh likh!" });
         }
 
