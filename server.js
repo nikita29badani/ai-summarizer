@@ -25,7 +25,7 @@ app.post('/summarize', async (req, res) => {
             return res.status(400).json({ error: "Bhai kuch text toh likh!" });
         }
 
-        const prompt = `Write 5 catchy Instagram captions with emojis for this description: ${TEXT}`;
+        const prompt = `Summarize the following text concisely in bullet points:\n\n${textToSummarize}`;
         
         const result = await model.generateContent(prompt);
         const response = await result.response;
